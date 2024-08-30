@@ -59,7 +59,7 @@ public class Bulbasaur {
     public Bulbasaur copy() {
         // TODO: Implement this method
         // Create and return a new Bulbasaur object with the same id and level
-        Bulbasaur b = new Bulbasaur;
+        Bulbasaur b = new Bulbasaur();
         b.setLevel(this.getLevel());
         return b; // Placeholder return value
     }

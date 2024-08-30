@@ -1,10 +1,11 @@
 public class Bulbasaur {
-    private int id;
-    private int level;
+    private int id = 1;
+    private int level = 1;
 
     // Constructor
     public Bulbasaur() {
-        // TODO: Initialize id and level with appropriate values
+        id = 1;
+        level = 1;
     }
 
     // setLevel method
@@ -13,12 +14,16 @@ public class Bulbasaur {
         // Update the level
         // If the new level is 16 or higher but less than 32, evolve to Ivysaur
         // If the new level is 32 or higher, evolve to Venusaur
+
+    level = lv;
+        if(level > 15 && level < 32) id = 2;
+        else if(level > 32) id = 3;
+        
     }
 
     // getLevel method
     public int getLevel() {
-        // TODO: Implement this method
-        return 0; // Placeholder return value
+        return level; // Placeholder return value
     }
 
     // getName method
@@ -31,29 +36,31 @@ public class Bulbasaur {
     // getID method
     public int getID() {
         // TODO: Implement this method
-        return 0; // Placeholder return value
+        return id;; // Placeholder return value
     }
 
     // toString method
     @Override
     public String toString() {
-        // TODO: Implement this method
-        // Return a string representation of the Bulbasaur object
-        return ""; // Placeholder return value
+        
+        return "Level: " + level + ", ID: " + id; // Placeholder return value
     }
 
     // equals method
     @Override
     public boolean equals(Object obj) {
-        // TODO: Implement this method
-        // Compare this Bulbasaur object with another object
-        return false; // Placeholder return value
+    if(id == 1) return "Bulbasaur";
+    else if(id == 2) return "Ivysaur";
+    else if(id == 3) return "Venusaur";
+    else return "";
     }
 
     // copy method
     public Bulbasaur copy() {
         // TODO: Implement this method
         // Create and return a new Bulbasaur object with the same id and level
-        return null; // Placeholder return value
+        Bulbasaur b = new Bulbasaur;
+        b.setLevel(this.getLevel());
+        return b; // Placeholder return value
     }
 }

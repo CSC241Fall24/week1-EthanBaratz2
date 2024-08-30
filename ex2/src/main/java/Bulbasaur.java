@@ -48,9 +48,9 @@ public class Bulbasaur {
 
     // equals method
     @Override
-    public boolean equals(Object obj) {
-        if(a.getLevel() != this.getLevel()) return false;
-        else if(a.getName().equals(a.getName())) return true;
+    public boolean equals(Bulbasaur obj) {
+        if(obj.getLevel() != this.getLevel()) return false;
+        else if(obj.getName().equals(this.getName())) return true;
         else return false;
     }
 

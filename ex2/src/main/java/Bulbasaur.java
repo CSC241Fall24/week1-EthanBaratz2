@@ -28,15 +28,15 @@ public class Bulbasaur {
 
     // getName method
     public String getName() {
-        // TODO: Implement this method
-        // Return the name based on the current id
-        return ""; // Placeholder return value
+       if(id == 1) return "Bulbasaur";
+    else if(id == 2) return "Ivysaur";
+    else if(id == 3) return "Venusaur";
+    else return "";
     }
 
     // getID method
     public int getID() {
-        // TODO: Implement this method
-        return id;; // Placeholder return value
+      return id;
     }
 
     // toString method
@@ -49,10 +49,9 @@ public class Bulbasaur {
     // equals method
     @Override
     public boolean equals(Object obj) {
-    if(id == 1) return "Bulbasaur";
-    else if(id == 2) return "Ivysaur";
-    else if(id == 3) return "Venusaur";
-    else return "";
+        if(a.getLevel() != this.getLevel()) return false;
+        else if(a.getName().equals(a.getName())) return true;
+        else return false;
     }
 
     // copy method
